@@ -47,8 +47,16 @@ int main()
 	CreateMatchfield();
 
 	// Refactor this!
+
+
+	// Field Color
+	//	(sf::Color(144, 238, 144));
+
+	// Color Scheme for the Goal Tiles
 	sf::RectangleShape square1(sf::Vector2f(50.00f, 50.00f));
-	square1.setFillColor(sf::Color::White);
+	square1.setFillColor(sf::Color(190,190,190));
+	square1.setOutlineThickness(-5);
+	square1.setOutlineColor(sf::Color::White);
 
 	sf::RectangleShape square2(sf::Vector2f(50.00f, 50.00f));
 	square2.setFillColor(sf::Color::White);
@@ -111,7 +119,7 @@ int main()
 		}
 
 
-		gamewindow.clear(sf::Color::Black);
+		gamewindow.clear(sf::Color(46, 139, 87));
 
 		// Problem - Dont create 49 Fields manually!
 
