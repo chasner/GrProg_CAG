@@ -114,6 +114,8 @@ int main()
 
 		gamewindow.clear(sf::Color::Black);
 
+		// Problem - Dont create 49 Fields manually!
+
 		square1.setPosition(50, 50);
 		gamewindow.draw(square1);
 		square2.setPosition(150, 50);
