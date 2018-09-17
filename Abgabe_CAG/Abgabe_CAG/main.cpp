@@ -9,7 +9,7 @@ const int amountRectangles = 49;
 bool hasMatchfieldCreated = false;
 
 // This Vector consists off every 
-std::vector<sf::RectangleShape> matchshapes(49);
+std::vector<sf::RectangleShape> matchRectangles(49);
 
 // This Function builds a 7 x 7 Matchfield 
 void CreateMatchfield()
@@ -21,7 +21,7 @@ void CreateMatchfield()
 		{
 			for (int j = 1; j < 8; j++)
 			{
-				std::cout << "Creating Square[" << i << "][" << j << "]\n";
+				std::cout << "Creating Rectangle[" << i << "][" << j << "]\n";
 				// Create Square[i][j] 
 				// sf::RectangleShape Square1(25.00*i,25.00*j);
 				//Square1.setFillColor(sf::Color::White);
@@ -85,24 +85,23 @@ int main()
 				std::cout << "New Resolution: " << mainEvent.size.width << "x" << mainEvent.size.height << "\n";
 				break;
 
-			case sf::Event::TextEntered:
+			case sf::Event::TextEntered: // Possible future need: Player typed in the mode he wants to play.
 				if (mainEvent.text.unicode < 128)
 				{
 					printf("%c", mainEvent.text.unicode);
-				}
-				
-
+				}				
 			default:
 				break;
 			}
 		}
 
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		// Refactor this -> easy solution for every rectangle
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) 
 		{
 			sf::Vector2i mousePos = sf::Mouse::getPosition(gamewindow);
 			sf::Vector2f square1position = square1.getPosition();
 
-			if (mousePos.x > 50 && mousePos.x < 100)
+			if (mousePos.x > 50 && mousePos.x < 100 && mousePos.y > 50 && mousePos.y < 100)
 			{
 				square1.setFillColor(sf::Color::Green);
 				std::cout << "Player clicked: " << "square1" << "\n";
