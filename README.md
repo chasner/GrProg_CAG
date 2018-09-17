@@ -25,7 +25,7 @@ x   x   x   x   x   x   x
 
 -> Here player 1 wins the match
 
-Every made move will be marked with an arrow, pointing in the direction of movement. A ball cannot moved again from those points with the same direction (but the ball can moved between those two points if it is another direction)
+Every made move will be marked with an arrow, pointing in the direction of movement. A ball cannot moved again from those points with the in both directions 
 
 
 x   x   x-->o   x   x   x
