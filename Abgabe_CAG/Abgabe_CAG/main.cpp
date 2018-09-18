@@ -1,3 +1,6 @@
+// Stuff to Fix and implement:
+// 1. Create a better solution to build all Tiles, including the information from the position of the tile, what tile it is and if the ball is on the tile
+
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
@@ -55,26 +58,44 @@ int main()
 	// Color Scheme for the Goal Tiles
 	sf::RectangleShape square1(sf::Vector2f(50.00f, 50.00f));
 	square1.setFillColor(sf::Color(190,190,190));
-	square1.setOutlineThickness(-5);
+	square1.setOutlineThickness(-5.0f);
 	square1.setOutlineColor(sf::Color::White);
 
+	// Color Scheme for the Tile where the Ball is
 	sf::RectangleShape square2(sf::Vector2f(50.00f, 50.00f));
 	square2.setFillColor(sf::Color::White);
+	square2.setOutlineThickness(-5.0f);
+	square2.setOutlineColor(sf::Color::Black);
 
+	// Color Scheme for the Tile where the Ball can be moved to
 	sf::RectangleShape square3(sf::Vector2f(50.00f, 50.00f));
-	square3.setFillColor(sf::Color::White);
+	square3.setFillColor(sf::Color::Green);
+	square3.setOutlineThickness(-5.0f);
+	square3.setOutlineColor(sf::Color::White);
 
+	// Color Scheme for the Tile where the Ball cannot be moved to
 	sf::RectangleShape square4(sf::Vector2f(50.00f, 50.00f));
-	square3.setFillColor(sf::Color::White);
+	square4.setFillColor(sf::Color::Red);
+	square4.setOutlineThickness(-5.0f);
+	square4.setOutlineColor(sf::Color::White);
 
 	sf::RectangleShape square5(sf::Vector2f(50.00f, 50.00f));
-	square3.setFillColor(sf::Color::White);
+	square5.setFillColor(sf::Color::White);
 
 	sf::RectangleShape square6(sf::Vector2f(50.00f, 50.00f));
-	square3.setFillColor(sf::Color::White);
+	square6.setFillColor(sf::Color::White);
 
 	sf::RectangleShape square7(sf::Vector2f(50.00f, 50.00f));
-	square3.setFillColor(sf::Color::White);
+	square7.setFillColor(sf::Color::White);
+
+	sf::RectangleShape square8(sf::Vector2f(50.00f, 50.00f));
+	square8.setFillColor(sf::Color::White);
+
+	sf::RectangleShape square9(sf::Vector2f(50.00f, 50.00f));
+	square9.setFillColor(sf::Color::White);
+
+	sf::RectangleShape square10(sf::Vector2f(50.00f, 50.00f));
+	square10.setFillColor(sf::Color::White);
 	
 	// Gameloop
 	while (gamewindow.isOpen())
@@ -123,6 +144,7 @@ int main()
 
 		// Problem - Dont create 49 Fields manually!
 
+		// Row 1
 		square1.setPosition(50, 50);
 		gamewindow.draw(square1);
 		square2.setPosition(150, 50);
@@ -137,6 +159,14 @@ int main()
 		gamewindow.draw(square6);
 		square7.setPosition(650, 50);
 		gamewindow.draw(square7);
+		
+		// Row 2
+		square8.setPosition(50, 150);
+		gamewindow.draw(square8);
+		square9.setPosition(150, 150);
+		gamewindow.draw(square9);
+		square10.setPosition(250, 150);
+		gamewindow.draw(square10);
 
 		
 		
