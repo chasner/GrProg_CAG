@@ -127,6 +127,7 @@ int main()
 		// Refactor this -> easy solution for every rectangle
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) 
 		{
+
 			sf::Vector2i mousePos = sf::Mouse::getPosition(gamewindow);
 			sf::Vector2f square1position = square1.getPosition();
 
